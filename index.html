@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>ARP – Compte salarial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="wrap">
+
+<section id="login">
+<div class="brand"><svg width="64" height="64" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#fff"/><path d="M10 31 22 10l12 21h-6l-6-11-6 11z" fill="#0a2f78"/><circle cx="22" cy="31" r="3" fill="#1e6fe0"/></svg><b>ARP</b></div>
+<div class="tag">Espace salarié sécurisé</div>
+<div class="card" style="margin-top:18px">
+<h2>Connexion</h2><div class="sub">Identifiez-vous pour accéder à votre compte salarial</div>
+<label>Nom</label><input id="nom" autocomplete="off">
+<label>Prénom</label><input id="pre" autocomplete="off">
+<label>Matricule</label><input id="mat" autocomplete="off">
+<label>Code PIN</label><input id="pin" type="password" inputmode="numeric" autocomplete="off">
+<div id="err" class="err hide">Informations incorrectes. Vérifiez vos données et réessayez.</div>
+<button id="go">Se connecter</button>
+</div>
+<div class="foot">Consulter, gérer et retirer votre salaire</div>
+</section>
+
+<section id="acc" class="hide">
+<div class="hero">
+<div class="top"><div class="brand"><svg width="34" height="34" viewBox="0 0 44 44"><circle cx="22" cy="22" r="22" fill="#fff"/><path d="M10 31 22 10l12 21h-6l-6-11-6 11z" fill="#0a2f78"/><circle cx="22" cy="31" r="3" fill="#1e6fe0"/></svg><b>ARP</b></div><button class="out" id="out">Déconnexion</button></div>
+<div class="amt">310 000 FCFA</div>
+<div class="pend">Montant en cours de paiement, jusqu’au 15 novembre</div>
+<div class="cd"><div><b id="d">0</b><span>jours</span></div><div><b id="h">0</b><span>heures</span></div><div><b id="m">0</b><span>min</span></div><div><b id="s">0</b><span>sec</span></div></div>
+<div class="hi">Bienvenue Secrétaire OBISSI Maurice</div>
+</div>
+
+<h3>Retirer mes fonds</h3>
+<div class="opts">
+<div class="opt" id="oMM"><img src="mobile-money.png" width="64" height="64" alt="Mobile Money">Mobile Money<small>Crédit sous 48 h</small></div>
+<div class="opt" id="oPH"><svg width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#dbe8ff"/><circle cx="20" cy="22" r="7" fill="#0a2f78"/><path d="M8 46c0-9 5-14 12-14s12 5 12 14z" fill="#0a2f78"/><circle cx="46" cy="24" r="6" fill="#1e6fe0"/><path d="M35 46c0-8 4-13 11-13s11 5 11 13z" fill="#1e6fe0"/><rect x="30" y="38" width="10" height="7" rx="1" fill="#ffcc00"/></svg>Agence ARP<small>Caissier · en personne</small></div>
+</div>
+
+<div id="mm" class="card hide" style="margin-top:16px">
+<button class="back" data-back>← Retour</button>
+<div class="mmh"><img src="mobile-money.png" alt=""><div><h2>Retrait Mobile Money</h2><div class="sub">Rapide et sécurisé</div></div></div>
+<div id="mm1"><label>Montant à retirer (FCFA)</label><input id="amt" inputmode="numeric" placeholder="Ex. 50 000">
+<label>Motif</label><select id="mot1"></select>
+<div id="e1" class="err hide"></div><button id="ok1">OK</button></div>
+<div id="mm2" class="hide"><label>Numéro Mobile Money</label>
+<div class="phone"><span><svg width="26" height="18" viewBox="0 0 30 20"><rect width="30" height="20" fill="#fbde4a"/><polygon points="0,0 22,0 0,14.7" fill="#009543"/><polygon points="30,20 8,20 30,5.3" fill="#dc241f"/></svg>+242</span><input id="tel" inputmode="numeric" placeholder="06 123 45 67"></div>
+<div id="e2" class="err hide"></div><button id="ok2">Confirmer le retrait</button></div>
+<div id="mm3" class="ok hide"></div>
+</div>
+
+<div id="ph" class="card hide" style="margin-top:16px">
+<button class="back" data-back>← Retour</button>
+<h2>Retrait en agence</h2><div class="sub">Présentez-vous au guichet de l’agence ARP</div>
+<label>Montant à retirer (FCFA)</label><input id="amt2" inputmode="numeric" placeholder="Ex. 100 000">
+<label>Motif</label><select id="mot2"></select>
+<div id="e3" class="err hide"></div><button id="ok3">Valider</button>
+<div id="ph3" class="ok hide"></div>
+</div>
+
+<h3>Journal des transactions</h3>
+<div class="card" id="jr" style="padding:6px 18px"></div>
+<div class="foot">Consulter, gérer et retirer votre salaire</div>
+</section>
+</div>
+<script src="script.js"></script></body></html>
